@@ -33,6 +33,7 @@ class Page:
     def verify_text(self, expected_text, *locator):
         actual_text = self.driver.find_element(*locator).text
         assert expected_text in actual_text, f'Expected text {expected_text}, but got {actual_text}'
+        print(f'Text is here:\n {actual_text} \n!')
 
     def wait_for_element_to_disappear(self, *locator, error_message=''):
         self.wait.until(EC.invisibility_of_element_located(locator),
