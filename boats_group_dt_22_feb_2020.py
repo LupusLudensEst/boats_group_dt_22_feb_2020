@@ -25,7 +25,7 @@ driver.find_element( *QA_ENG_MIA ).click()
 # verify page has a text 'As QA Automation Engineer you will develop automated test solutions'
 actual_text = driver.find_element( *QA_TXT_HR ).text
 assert 'As QA Automation Engineer you will develop automated test solutions' in actual_text
-print(f'Text is here:\n {actual_text} \n!')
+print(f'Text is here:\n {actual_text[:150]}...to be continued \n!')
 
 # driver quit
 driver.quit()
