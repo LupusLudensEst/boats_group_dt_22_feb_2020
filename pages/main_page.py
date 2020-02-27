@@ -5,7 +5,7 @@ from pages.base_page import Page
 class MainPage(Page):
 
     # locators
-    CRS_BTN = (By.XPATH, "//li[@class='menu-item menu-item-type-post_type menu-item-object-page menu-item-3954']")
+    CRS_BTN = (By.ID, "menu-item-3954") #(By.XPATH, "//li[@class='menu-item menu-item-type-post_type menu-item-object-page menu-item-3954']")
     QA_ENG_MIA = (By.XPATH, "//a[@ns-qa='QA Automation Engineer']")
     QA_TXT_HR = (By.ID, "gnewtonJobDescriptionText")
 
