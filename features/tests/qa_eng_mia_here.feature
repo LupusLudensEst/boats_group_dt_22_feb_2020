@@ -1,5 +1,5 @@
 # Created by rapid at 2/4/2020
-Feature: Open mian page, go to careers, click QA Automation Engineer Miami button
+Feature: Open main page, go to careers, click QA Automation Engineer Miami button
 
   Scenario: QA Automation Engineer Miami is here
     Given Loginpage
