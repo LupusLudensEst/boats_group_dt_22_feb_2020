@@ -48,11 +48,10 @@ sleep(2)
 # fill the Company Name field
 # Randomizer
 password = str(randint(999, 9999))
-name = 'name' + password
-email = (name + '@sample.com')
-print(f"Name: {((name + ' ') * 2).strip(' ')}")
+comp_name = 'name' + password
+print(f"Company Name: {((comp_name + ' ') * 2).strip(' ')}")
 driver.find_element(*COMPANY_NAME).clear()
-driver.find_element(*COMPANY_NAME).send_keys(((name + ' ') * 2).strip(' '))
+driver.find_element(*COMPANY_NAME).send_keys(((comp_name + ' ') * 2).strip(' '))
 sleep(2)
 
 # fill the Email Address field
