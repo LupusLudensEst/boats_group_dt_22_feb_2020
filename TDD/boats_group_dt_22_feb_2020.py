@@ -1,7 +1,6 @@
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import ElementClickInterceptedException
 
 driver = webdriver.Chrome()
 driver.maximize_window()
@@ -20,12 +19,13 @@ driver.find_element( *CRS_BTN ).click()
 
 # click on QA Automation Engineer in Miami button inside the iframe
 driver.switch_to.frame(driver.find_element_by_id("gnewtonIframe"))
+sleep(2)
 driver.find_element( *QA_ENG_MIA ).click()
 
 # verify page has a text 'As QA Automation Engineer you will develop automated test solutions'
 actual_text = driver.find_element( *QA_TXT_HR ).text
 assert 'As QA Automation Engineer you will develop automated test solutions' in actual_text
-print(f'Text is here:\n {actual_text[:150]}...to be continued \n!')
+print(f'Text is here:\n {actual_text[:150]}...to be continued!')
 
 # driver quit
 driver.quit()
