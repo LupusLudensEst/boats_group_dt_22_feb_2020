@@ -26,14 +26,14 @@ class Page:
         e.clear()
         e.send_keys(text)
 
-    def open_page(self, url: str=''):
-        #logger.info(f'Opening page {self.base_url + url}')
+    def open_page(self, url: str = ''):
+        # logger.info(f'Opening page {self.base_url + url}')
         self.driver.get(self.base_url + url)
 
     def verify_text(self, expected_text, *locator):
         actual_text = self.driver.find_element(*locator).text
         assert expected_text in actual_text, f'Expected text {expected_text}, but got {actual_text}'
-        print(f'Text is here:\n {actual_text[:150]}...to be continued \n!')
+        print(f'Text is here:\n {actual_text[:150]}...to be continued !')
 
     def wait_for_element_to_disappear(self, *locator, error_message=''):
         self.wait.until(EC.invisibility_of_element_located(locator),
