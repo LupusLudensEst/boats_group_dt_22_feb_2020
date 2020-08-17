@@ -163,7 +163,7 @@ class MainPage(Page):
         self.click(*self.SEND_MSG_BTN)
         sleep(4)
 
-    def qa_txt_hr(self, txt):
+    def qa_txt_here(self, txt):
         """
         Assert text is here The captcha field appears to be incorrect
         """

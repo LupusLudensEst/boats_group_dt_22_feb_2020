@@ -90,8 +90,8 @@ def clck_send_mess_btn(context):
 
 
 @then("Assert text is here {txt}")
-def qa_txt_hr(context, txt):
+def qa_txt_here(context, txt):
     """
     Assert text is here The captcha field appears to be incorrect
     """
-    context.app.main_page.qa_txt_hr(txt)
+    context.app.main_page.qa_txt_here(txt)
