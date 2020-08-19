@@ -40,7 +40,7 @@ class MainPage(Page):
         Click on QA Automation Engineer in Miami button inside the iframe
         """
         self.driver.switch_to.frame(self.driver.find_element_by_id("gnewtonIframe"))
-        sleep(4)
+        sleep(8)
         self.click(*self.QA_ENG_MIA)
 
     def qa_txt_hr(self, text):

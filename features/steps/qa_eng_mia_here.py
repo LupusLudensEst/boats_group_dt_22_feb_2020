@@ -12,6 +12,6 @@ def click_crs_btn(context):
 def click_qa_eng_mia(context):
     context.app.main_page.click_qa_eng_mia()
 
-@then("Verify page has a text As {text_here}")
+@then("Verify page has a text as {text_here}")
 def qa_txt_hr(context, text_here):
     context.app.main_page.qa_txt_hr(text_here)

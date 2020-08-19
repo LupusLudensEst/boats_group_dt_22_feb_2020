@@ -5,4 +5,4 @@ Feature: Open main page, go to careers, click QA Automation Engineer Miami butto
     Given Loginpage
     Then Click on careers button
     Then Click on QA Automation Engineer in Miami button inside the iframe
-    Then Verify page has a text As QA Automation Engineer you will develop automated test solutions
+    Then Verify page has a text as QA Automation Engineer you will develop automated test solutions
