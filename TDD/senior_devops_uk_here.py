@@ -8,7 +8,7 @@ driver.implicitly_wait(20)
 
 # locators
 CRS_BTN = (By.XPATH, "//li[@class='menu-item menu-item-type-post_type menu-item-object-page menu-item-3954']")
-QA_ENG_MIA = (By.XPATH, "//a[@ns-qa='QA Automation Engineer']")
+SEN_DEVOP_UK = (By.XPATH, "//a[contains(text(), 'Senior DevOps Engineer')]")
 QA_TXT_HR = (By.ID, "gnewtonJobDescriptionText")
 
 # open the url
@@ -19,12 +19,12 @@ driver.find_element( *CRS_BTN ).click()
 
 # click on QA Automation Engineer in Miami button inside the iframe
 driver.switch_to.frame(driver.find_element_by_id("gnewtonIframe"))
-sleep(2)
-driver.find_element( *QA_ENG_MIA ).click()
+sleep(4)
+driver.find_element( *SEN_DEVOP_UK ).click()
 
 # verify page has a text 'As QA Automation Engineer you will develop automated test solutions'
 actual_text = driver.find_element( *QA_TXT_HR ).text
-assert 'As QA Automation Engineer you will develop automated test solutions' in actual_text
+assert 'Senior DevOps' in actual_text
 print(f'Text is here:\n {actual_text[:150]}...to be continued!')
 
 # driver quit

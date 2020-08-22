@@ -10,7 +10,7 @@ class MainPage(Page):
 
     # locators
     CRS_BTN = (By.ID, "menu-item-3954")
-    QA_ENG_MIA = (By.XPATH, "//a[@ns-qa='QA Automation Engineer']")
+    SEN_DEVOP_UK = (By.XPATH, "//a[contains(text(), 'Senior DevOps Engineer')]")
     QA_TXT_HR = (By.ID, "gnewtonJobDescriptionText")
     OUR_BRANDS = (By.ID, "menu-item-12654")
     OUR_SOLUTIONS = (By.ID, "menu-item-12656")
@@ -37,15 +37,15 @@ class MainPage(Page):
 
     def click_qa_eng_mia(self):
         """
-        Click on QA Automation Engineer in Miami button inside the iframe
+        Click on Senior DevOps Engineer Fareham, United Kingdom button inside the iframe
         """
         self.driver.switch_to.frame(self.driver.find_element_by_id("gnewtonIframe"))
         sleep(8)
-        self.click(*self.QA_ENG_MIA)
+        self.click(*self.SEN_DEVOP_UK)
 
     def qa_txt_hr(self, text):
         """
-        Verify page has a text 'As QA Automation Engineer you will develop automated test solutions'
+        Verify page has a text 'Senior DevOps'
         """
         self.verify_text(text, *self.QA_TXT_HR)
         sleep(2)

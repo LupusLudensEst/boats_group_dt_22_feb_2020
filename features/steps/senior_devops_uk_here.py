@@ -8,7 +8,7 @@ def open_homepage(context):
 def click_crs_btn(context):
     context.app.main_page.click_crs_btn()
 
-@then("Click on QA Automation Engineer in Miami button inside the iframe")
+@then("Click on Senior DevOps Engineer Fareham, United Kingdom button inside the iframe")
 def click_qa_eng_mia(context):
     context.app.main_page.click_qa_eng_mia()
 
